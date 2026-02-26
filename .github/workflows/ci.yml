@@ -1,0 +1,16 @@
+name: CI Test Workflow
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run Simple Command
+        run: echo "CI workflow running successfully"
